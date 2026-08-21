@@ -1,4 +1,152 @@
-/* Estilos del proyecto Laura Decor */
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfbf7;
+  color: #2c2520;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Encabezado y navegacion */
+.header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ecdcc9;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #2c2520;
+}
+
+.brand-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c59b6d;
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #8c6239;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a3f35;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #b8860b;
+}
+
+/* Textos y paneles */
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.intro {
+  font-size: 1.05rem;
+  color: #5c5046;
+  margin-bottom: 18px;
+}
+
+.muted {
+  color: #7a6e65;
+  font-size: 0.92rem;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #ecdcc9;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 1.7rem;
+  color: #3b2f2f;
+  margin-bottom: 6px;
+}
+
+/* Botones */
+.btn-principal {
+  background-color: #c59b6d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-principal:hover {
+  background-color: #a87e51;
+}
+
+.btn-secundario {
+  background-color: #f5ebe0;
+  color: #5c4328;
+  border: 1px solid #d5bdaf;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secundario:hover {
+  background-color: #e6d5c3;
 }
