@@ -150,3 +150,31 @@ body {
 .btn-secundario:hover {
   background-color: #e6d5c3;
 }
+
+/* Pie de pagina */
+.footer {
+  background-color: #ffffff;
+  border-top: 2px solid #ecdcc9;
+  padding: 28px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8c6239;
+  margin-bottom: 4px;
+}
+
+.footer-info p {
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 export default function App() {
   const [mostrarAdmin, setMostrarAdmin] = useState(false)
@@ -11,6 +12,7 @@ export default function App() {
         <h1>Laura Decor</h1>
         <p>Decoración de eventos y fiestas especiales</p>
       </main>
+      <Footer />
     </div>
   )
 }
