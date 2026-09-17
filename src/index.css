@@ -239,3 +239,77 @@ body {
   font-size: 1.1rem;
   margin-bottom: 8px;
 }
+
+/* Tarjetas del catalogo */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta-paquete {
+  background-color: #fdfbf7;
+  border: 1px solid #ecdcc9;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta-paquete.destacado {
+  border: 2px solid #c59b6d;
+  background-color: #fffaf3;
+}
+
+.tarjeta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.etiqueta-categoria {
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #8c6239;
+  background-color: #f5ebe0;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.etiqueta-destacado {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #b8860b;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.tarjeta-paquete h3 {
+  font-size: 1.2rem;
+  color: #2c2520;
+  margin-bottom: 8px;
+}
+
+.tarjeta-descripcion {
+  font-size: 0.94rem;
+  color: #5c5046;
+  margin-bottom: 16px;
+}
+
+.tarjeta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ecdcc9;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.tarjeta-precio {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #8c6239;
+}
