@@ -1,32 +1,44 @@
-/* Estilos generales */
+/* Estilos generales (inspirados en la paleta calida y tipografias Fraunces + Cabin) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cabin', 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background-color: #fdfbf7;
-  color: #2c2520;
+  background-color: #f8f3eb;
+  color: #4e220f;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
 }
 
 /* Contenedor principal */
 .container {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Encabezado y navegacion */
+.text-center {
+  text-align: center;
+}
+
+/* Encabezado superior estilo De Lolita */
 .header {
-  background-color: #ffffff;
-  border-bottom: 2px solid #ecdcc9;
+  background-color: #4e220f;
   padding: 14px 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 14px rgba(78, 34, 15, 0.18);
 }
 
 .header-content {
@@ -42,261 +54,504 @@ body {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #2c2520;
+  color: #ffffff;
 }
 
 .brand-logo {
-  width: 55px;
-  height: 55px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #c59b6d;
+  border: 2px solid #f6ab3e;
+  background-color: #ffffff;
 }
 
 .brand-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #8c6239;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 0.82rem;
+  color: #f4a587;
 }
 
 .nav-links {
   display: flex;
-  gap: 18px;
+  gap: 22px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #4a3f35;
+  color: #ffffff;
+  font-size: 1.02rem;
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #b8860b;
+  color: #f4a587;
+}
+
+.btn-header-pill {
+  background-color: #f4a587;
+  color: #4e220f;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-header-pill:hover {
+  background-color: #f6ab3e;
+}
+
+/* Banner Hero de ancho completo */
+.hero-banner {
+  width: 100%;
+  min-height: 560px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  min-height: 560px;
+  background: linear-gradient(
+    90deg,
+    rgba(78, 34, 15, 0.86) 0%,
+    rgba(78, 34, 15, 0.65) 55%,
+    rgba(78, 34, 15, 0.35) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.hero-banner-content {
+  max-width: 720px;
+  color: #ffffff;
+}
+
+.hero-eyebrow {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.25rem;
+  color: #f6ab3e;
+  margin-bottom: 10px;
+}
+
+.hero-banner-content h1 {
+  font-size: 2.9rem;
+  line-height: 1.18;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #f8f3eb;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.btn-lolita-amarillo {
+  background-color: #f6ab3e;
+  color: #4e220f;
+  text-decoration: none;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-lolita-amarillo:hover {
+  background-color: #f4bd46;
+}
+
+.btn-lolita-blanco {
+  background-color: #ffffff;
+  color: #4e220f;
+  text-decoration: none;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-lolita-blanco:hover {
+  background-color: #f4a587;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #f8f3eb;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-dot.activo {
+  background-color: #f6ab3e;
+  border-color: #f6ab3e;
+  color: #4e220f;
+}
+
+/* Seccion Acerca de nosotros */
+.acerca-section {
+  background-color: #fffaf3;
+  padding: 75px 0;
+  border-bottom: 1px solid #ecdcc9;
+}
+
+.acerca-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.acerca-texto h2 {
+  font-size: 2.2rem;
+  color: #7a3b12;
+  margin-bottom: 18px;
+}
+
+.acerca-texto p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #7a3b12;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.btn-lolita-celeste {
+  background-color: #8cd0e9;
+  color: #4e220f;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.02rem;
+  display: inline-block;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-lolita-celeste:hover {
+  background-color: #97cec5;
+}
+
+.acerca-imagen-col {
+  text-align: center;
+}
+
+.acerca-marco-circular {
+  width: 270px;
+  height: 270px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 3px dashed #f4a587;
+  box-shadow: 0 10px 26px rgba(78, 34, 15, 0.1);
+}
+
+.acerca-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.acerca-frase-corazon {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.45rem;
+  color: #4e220f;
+  font-weight: 600;
+}
+
+/* Mosaico 2x2 estilo De Lolita */
+.mosaico-section {
+  padding: 65px 0 30px;
+}
+
+.mosaico-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.mosaico-bloque {
+  min-height: 310px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mosaico-capa {
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  background-color: rgba(78, 34, 15, 0.42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn-mosaico {
+  background-color: #ffffff;
+  color: #4e220f;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.btn-mosaico:hover {
+  background-color: #4e220f;
+  color: #ffffff;
 }
 
 /* Textos y paneles */
 .eyebrow {
   text-transform: uppercase;
   font-size: 0.85rem;
-  letter-spacing: 1px;
-  color: #b8860b;
-  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: #f4a587;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
 .intro {
   font-size: 1.05rem;
-  color: #5c5046;
+  color: #7a3b12;
   margin-bottom: 18px;
 }
 
 .muted {
-  color: #7a6e65;
-  font-size: 0.92rem;
+  color: #7a3b12;
+  font-size: 1rem;
 }
 
 .panel {
   background-color: #ffffff;
   border: 1px solid #ecdcc9;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  padding: 36px 28px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 24px rgba(78, 34, 15, 0.06);
 }
 
 .section-heading {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .section-heading h2 {
-  font-size: 1.7rem;
-  color: #3b2f2f;
-  margin-bottom: 6px;
-}
-
-/* Botones */
-.btn-principal {
-  background-color: #c59b6d;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-principal:hover {
-  background-color: #a87e51;
-}
-
-.btn-secundario {
-  background-color: #f5ebe0;
-  color: #5c4328;
-  border: 1px solid #d5bdaf;
-  padding: 9px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-secundario:hover {
-  background-color: #e6d5c3;
-}
-
-/* Pie de pagina */
-.footer {
-  background-color: #ffffff;
-  border-top: 2px solid #ecdcc9;
-  padding: 28px 0;
-  margin-top: 40px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #8c6239;
-  margin-bottom: 4px;
-}
-
-.footer-info p {
-  font-size: 0.92rem;
-  margin-bottom: 4px;
-}
-
-/* Seccion Hero / Inicio */
-.hero-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  margin-top: 24px;
-  background-color: #fffaf3;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-text h1 {
   font-size: 2.1rem;
-  color: #3b2f2f;
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.hero-image-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-logo {
-  width: 210px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #c59b6d;
-}
-
-/* Tarjetas de beneficios */
-.beneficios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.tarjeta-beneficio {
-  background-color: #fdfbf7;
-  border: 1px solid #ecdcc9;
-  border-radius: 10px;
-  padding: 18px;
-}
-
-.tarjeta-beneficio h3 {
-  color: #8c6239;
-  font-size: 1.1rem;
+  color: #4e220f;
   margin-bottom: 8px;
 }
 
-/* Tarjetas del catalogo */
-.catalogo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+/* Botones generales */
+.btn-principal {
+  background-color: #7a3b12;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
 }
 
-.tarjeta-paquete {
-  background-color: #fdfbf7;
-  border: 1px solid #ecdcc9;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.btn-principal:hover {
+  background-color: #4e220f;
 }
 
-.tarjeta-paquete.destacado {
-  border: 2px solid #c59b6d;
-  background-color: #fffaf3;
+.btn-secundario {
+  background-color: #f8f3eb;
+  color: #4e220f;
+  border: 1px solid #e2d1be;
+  padding: 9px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
 }
 
-.tarjeta-header {
+.btn-secundario:hover {
+  background-color: #f4a587;
+}
+
+/* Filtros y buscador del catalogo */
+.filtros-barra {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+  background-color: #f8f3eb;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.categorias-botones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.input-busqueda {
+  padding: 11px 16px;
+  border: 1px solid #d5bdaf;
+  border-radius: 999px;
+  min-width: 280px;
+  font-size: 0.95rem;
+  font-family: 'Cabin', sans-serif;
+  background-color: #ffffff;
+}
+
+.empty {
+  text-align: center;
+  padding: 28px;
+  color: #7a3b12;
+  background-color: #f8f3eb;
+  border: 1px dashed #d5bdaf;
+  border-radius: 12px;
+}
+
+/* Tarjetas del catalogo con foto superior estilo De Lolita */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tarjeta-paquete {
+  background-color: #fffaf3;
+  border: 1px solid #ecdcc9;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta-paquete:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(78, 34, 15, 0.12);
+}
+
+.tarjeta-paquete.destacado {
+  border: 2px solid #f6ab3e;
+}
+
+.tarjeta-img-box {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .etiqueta-categoria {
-  font-size: 0.78rem;
-  font-weight: bold;
-  color: #8c6239;
-  background-color: #f5ebe0;
-  padding: 3px 10px;
-  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #4e220f;
+  background-color: #f8f3eb;
+  padding: 4px 12px;
+  border-radius: 999px;
 }
 
 .etiqueta-destacado {
   font-size: 0.75rem;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #b8860b;
-  padding: 3px 9px;
-  border-radius: 20px;
+  font-weight: 700;
+  color: #4e220f;
+  background-color: #f6ab3e;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.tarjeta-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .tarjeta-paquete h3 {
-  font-size: 1.2rem;
-  color: #2c2520;
+  font-size: 1.28rem;
+  color: #4e220f;
   margin-bottom: 8px;
 }
 
 .tarjeta-descripcion {
-  font-size: 0.94rem;
-  color: #5c5046;
-  margin-bottom: 16px;
+  font-size: 0.96rem;
+  color: #7a3b12;
+  margin-bottom: 18px;
 }
 
 .tarjeta-footer {
@@ -304,12 +559,119 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #ecdcc9;
-  padding-top: 12px;
+  padding-top: 14px;
   margin-top: auto;
 }
 
 .tarjeta-precio {
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #8c6239;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #7a3b12;
+}
+
+/* Pie de pagina marron calido estilo De Lolita (#7A3B12) */
+.footer {
+  background-color: #7a3b12;
+  color: #f8f3eb;
+  padding: 55px 0 0;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 36px;
+  padding-bottom: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f6ab3e;
+  background-color: #ffffff;
+}
+
+.footer-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  font-size: 0.92rem;
+  color: #f4a587;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  color: #f6ab3e;
+  margin-bottom: 14px;
+}
+
+.footer-text {
+  font-size: 0.96rem;
+  color: #f8f3eb;
+  margin-bottom: 8px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list a {
+  color: #f8f3eb;
+  text-decoration: none;
+}
+
+.footer-list a:hover {
+  color: #f4a587;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.social-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f8f3eb;
+  color: #7a3b12;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.social-circle:hover {
+  background-color: #f6ab3e;
+  color: #4e220f;
+}
+
+.footer-bottom {
+  background-color: #4e220f;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #f8f3eb;
 }
