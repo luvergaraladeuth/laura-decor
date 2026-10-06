@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import PackageCard from './components/PackageCard.jsx'
+import Cotizador from './components/Cotizador.jsx'
 import { initialPackages } from './data/initialPackages.js'
 
 const slidesHero = [
@@ -238,6 +239,9 @@ export default function App() {
             </div>
           )}
         </section>
+
+        {/* Seccion 3: Cotizador interactivo */}
+        <Cotizador paquetes={paquetes} paqueteInicial={paqueteSeleccionado} />
       </main>
 
       <Footer />

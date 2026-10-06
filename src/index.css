@@ -675,3 +675,98 @@ h1, h2, h3, h4 {
   font-size: 0.9rem;
   color: #f8f3eb;
 }
+
+/* Seccion Cotizador estilo De Lolita */
+.cotizador-panel {
+  background-color: #fffaf3;
+}
+
+.cotizador-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.cotizador-controles {
+  background-color: #ffffff;
+  border: 1px solid #ecdcc9;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.campo-grupo {
+  margin-bottom: 16px;
+}
+
+.campo-grupo label {
+  display: block;
+  font-weight: 700;
+  color: #4e220f;
+  margin-bottom: 6px;
+  font-size: 0.96rem;
+}
+
+.campo-grupo select,
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d5bdaf;
+  border-radius: 10px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.96rem;
+  color: #4e220f;
+  background-color: #fdfbf7;
+}
+
+.campo-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #7a3b12;
+}
+
+.cotizador-resumen {
+  background-color: #4e220f;
+  color: #f8f3eb;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cotizador-resumen h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.resumen-fila {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(248, 243, 235, 0.18);
+  font-size: 0.98rem;
+}
+
+.resumen-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 2px solid #f6ab3e;
+  font-size: 1.25rem;
+  color: #f6ab3e;
+}
+
+.resumen-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
