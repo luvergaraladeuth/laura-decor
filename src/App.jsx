@@ -3,7 +3,20 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import PackageCard from './components/PackageCard.jsx'
 import Cotizador from './components/Cotizador.jsx'
+import ContactForm from './components/ContactForm.jsx'
 import { initialPackages } from './data/initialPackages.js'
+
+const solicitudesIniciales = [
+  {
+    id: 'sol-1',
+    nombre: 'Valentina Ríos',
+    telefono: '311 450 8890',
+    tipoEvento: 'Baby Shower',
+    fechaEvento: '2026-11-28',
+    mensaje: 'Hola Laura, me gustaría cotizar el paquete Baby Shower Ternura en tonos rosa pastel y dorado.',
+    atendido: false
+  }
+]
 
 const slidesHero = [
   {
@@ -43,9 +56,22 @@ export default function App() {
   const [busqueda, setBusqueda] = useState('')
   const [paqueteSeleccionado, setPaqueteSeleccionado] = useState(initialPackages[0])
 
+  const [solicitudes, setSolicitudes] = useState(() => {
+    const guardadas = localStorage.getItem('laura_decor_solicitudes')
+    return guardadas ? JSON.parse(guardadas) : solicitudesIniciales
+  })
+
   useEffect(() => {
     localStorage.setItem('laura_decor_paquetes_v2', JSON.stringify(paquetes))
   }, [paquetes])
+
+  useEffect(() => {
+    localStorage.setItem('laura_decor_solicitudes', JSON.stringify(solicitudes))
+  }, [solicitudes])
+
+  function agregarSolicitud(nuevaSolicitud) {
+    setSolicitudes([nuevaSolicitud, ...solicitudes])
+  }
 
   // Filtrar paquetes por categoria y por texto de busqueda (.toLowerCase() y .includes())
   const paquetesFiltrados = paquetes.filter((paquete) => {
@@ -242,6 +268,9 @@ export default function App() {
 
         {/* Seccion 3: Cotizador interactivo */}
         <Cotizador paquetes={paquetes} paqueteInicial={paqueteSeleccionado} />
+
+        {/* Seccion 4: Formulario de Contacto real */}
+        <ContactForm onAgregarSolicitud={agregarSolicitud} />
       </main>
 
       <Footer />

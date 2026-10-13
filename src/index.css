@@ -770,3 +770,86 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   margin-top: 22px;
 }
+
+/* Seccion de Contacto estilo De Lolita */
+.contacto-panel {
+  background-color: #ffffff;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.contacto-tarjetas-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.contacto-item {
+  background-color: #f8f3eb;
+  border-left: 4px solid #f4a587;
+  padding: 14px 18px;
+  border-radius: 10px;
+}
+
+.contacto-item h4 {
+  font-size: 1.05rem;
+  color: #4e220f;
+  margin-bottom: 2px;
+}
+
+.contacto-item p {
+  color: #7a3b12;
+  font-weight: 600;
+}
+
+.contacto-form {
+  background-color: #fffaf3;
+  border: 1px solid #ecdcc9;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.contacto-form h3 {
+  font-size: 1.5rem;
+  color: #4e220f;
+  margin-bottom: 16px;
+}
+
+.campos-dobles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.btn-ancho {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.alerta-error {
+  background-color: #fde8e8;
+  color: #9b1c1c;
+  border: 1px solid #f8b4b4;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 0.92rem;
+}
+
+.alerta-exito {
+  background-color: #e6f4ea;
+  color: #1e4620;
+  border: 1px solid #a8dab5;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 0.94rem;
+}
