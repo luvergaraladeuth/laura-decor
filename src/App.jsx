@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx'
 import PackageCard from './components/PackageCard.jsx'
 import Cotizador from './components/Cotizador.jsx'
 import ContactForm from './components/ContactForm.jsx'
+import AdminLogin from './components/AdminLogin.jsx'
 import { initialPackages } from './data/initialPackages.js'
 
 const solicitudesIniciales = [
@@ -44,6 +45,7 @@ const slidesHero = [
 
 export default function App() {
   const [mostrarAdmin, setMostrarAdmin] = useState(false)
+  const [adminAutenticado, setAdminAutenticado] = useState(false)
   const [slideActual, setSlideActual] = useState(0)
 
   // Estado de los paquetes del catalogo (guardados en localStorage)
@@ -90,12 +92,28 @@ export default function App() {
     <div>
       <Header mostrarAdmin={mostrarAdmin} setMostrarAdmin={setMostrarAdmin} />
 
-      {/* Banner principal de ancho completo estilo De Lolita */}
-      <section
-        id="inicio"
-        className="hero-banner"
-        style={{ backgroundImage: `url(${banner.imagen})` }}
-      >
+      {mostrarAdmin ? (
+        <main className="container">
+          {!adminAutenticado ? (
+            <AdminLogin
+              onLoginExitoso={() => setAdminAutenticado(true)}
+              onCancelar={() => setMostrarAdmin(false)}
+            />
+          ) : (
+            <section className="panel">
+              <h2>Panel de Administración de Laura Decor</h2>
+              <p className="muted">Sesión iniciada correctamente.</p>
+            </section>
+          )}
+        </main>
+      ) : (
+        <>
+          {/* Banner principal de ancho completo estilo De Lolita */}
+          <section
+            id="inicio"
+            className="hero-banner"
+            style={{ backgroundImage: `url(${banner.imagen})` }}
+          >
         <div className="hero-overlay">
           <div className="container hero-banner-content">
             <p className="hero-eyebrow">{banner.subtitulo}</p>
@@ -272,6 +290,8 @@ export default function App() {
         {/* Seccion 4: Formulario de Contacto real */}
         <ContactForm onAgregarSolicitud={agregarSolicitud} />
       </main>
+        </>
+      )}
 
       <Footer />
     </div>
