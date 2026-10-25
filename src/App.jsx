@@ -5,6 +5,7 @@ import PackageCard from './components/PackageCard.jsx'
 import Cotizador from './components/Cotizador.jsx'
 import ContactForm from './components/ContactForm.jsx'
 import AdminLogin from './components/AdminLogin.jsx'
+import AdminPanel from './components/AdminPanel.jsx'
 import { initialPackages } from './data/initialPackages.js'
 
 const solicitudesIniciales = [
@@ -100,10 +101,16 @@ export default function App() {
               onCancelar={() => setMostrarAdmin(false)}
             />
           ) : (
-            <section className="panel">
-              <h2>Panel de Administración de Laura Decor</h2>
-              <p className="muted">Sesión iniciada correctamente.</p>
-            </section>
+            <AdminPanel
+              paquetes={paquetes}
+              setPaquetes={setPaquetes}
+              solicitudes={solicitudes}
+              setSolicitudes={setSolicitudes}
+              onCerrarSesion={() => {
+                setAdminAutenticado(false)
+                setMostrarAdmin(false)
+              }}
+            />
           )}
         </main>
       ) : (

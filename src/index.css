@@ -883,3 +883,74 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   margin-top: 18px;
 }
+
+/* Panel de Administracion */
+.admin-header-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: #fffaf3;
+}
+
+.admin-form {
+  background-color: #fdfbf7;
+  border: 1px solid #ecdcc9;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.admin-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-item {
+  background-color: #fffaf3;
+  border: 1px solid #ecdcc9;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.admin-item.completado {
+  background-color: #f0f4f1;
+  opacity: 0.85;
+}
+
+.admin-item.completado h4 {
+  text-decoration: line-through;
+}
+
+.admin-item-info h4 {
+  font-size: 1.12rem;
+  color: #4e220f;
+  margin-bottom: 4px;
+}
+
+.admin-item-acciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-eliminar {
+  background-color: #fde8e8;
+  color: #9b1c1c;
+  border: 1px solid #f8b4b4;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-eliminar:hover {
+  background-color: #fbd5d5;
+}
