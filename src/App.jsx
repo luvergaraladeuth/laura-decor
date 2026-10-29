@@ -6,6 +6,7 @@ import Cotizador from './components/Cotizador.jsx'
 import ContactForm from './components/ContactForm.jsx'
 import AdminLogin from './components/AdminLogin.jsx'
 import AdminPanel from './components/AdminPanel.jsx'
+import ChatbotIA from './components/ChatbotIA.jsx'
 import { initialPackages } from './data/initialPackages.js'
 
 const solicitudesIniciales = [
@@ -300,6 +301,7 @@ export default function App() {
         </>
       )}
 
+      <ChatbotIA paquetes={paquetes} />
       <Footer />
     </div>
   )
