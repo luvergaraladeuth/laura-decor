@@ -1090,3 +1090,60 @@ h1, h2, h3, h4 {
   font-size: 0.88rem;
   font-family: 'Cabin', sans-serif;
 }
+
+/* Diseno Responsive para tablets y celulares */
+@media (max-width: 900px) {
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .acerca-grid,
+  .cotizador-grid,
+  .contacto-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .hero-banner,
+  .hero-overlay {
+    min-height: 440px;
+    padding: 40px 0;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 1.85rem;
+  }
+
+  .mosaico-fila,
+  .catalogo-grid,
+  .campos-dobles {
+    grid-template-columns: 1fr;
+  }
+
+  .input-busqueda {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .chatbot-ventana {
+    width: 90vw;
+    right: 5vw;
+  }
+}
