@@ -1,10 +1,17 @@
-export default function Footer() {
+export default function Footer({ onAbrirAdmin }) {
   return (
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-col">
           <div className="footer-brand">
-            <img src="./logo.jpeg" alt="Laura Decor" className="footer-logo" />
+            <img
+              src="./logo.jpeg"
+              alt="Laura Decor"
+              className="footer-logo"
+              onClick={onAbrirAdmin}
+              title="Acceso interno Laura Decor"
+              style={{ cursor: 'pointer' }}
+            />
             <div>
               <p className="footer-title">Laura Decor</p>
               <p className="footer-tagline">Experiencias memorables hechas una a una con mucho amor.</p>
@@ -52,6 +59,14 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
+        <button
+          type="button"
+          className="footer-admin-logo-btn"
+          onClick={onAbrirAdmin}
+          title="Acceso Administrador"
+        >
+          <img src="./logo.jpeg" alt="Admin Laura Decor" className="footer-mini-logo" />
+        </button>
         <p>Copyright © 2026 Laura Decor – Todos los derechos reservados.</p>
       </div>
     </footer>

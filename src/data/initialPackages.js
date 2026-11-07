@@ -41,7 +41,7 @@ export const initialPackages = [
     nombre: "Boda y Aniversario Especial",
     categoria: "Bodas",
     precio: 780000,
-    imagen: "https://images.unsplash.com/photo-1519225336804-91fe957e8a9c?auto=format&fit=crop&w=800&q=80",
+    imagen: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
     incluye: "Arco con flores de lujo y follaje, telas blancas con luces cálidas, mesa para torta y 4 centros de mesa.",
     destacado: true
   },

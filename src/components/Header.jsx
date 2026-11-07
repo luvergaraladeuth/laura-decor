@@ -1,4 +1,4 @@
-export default function Header({ mostrarAdmin, setMostrarAdmin }) {
+export default function Header({ setMostrarAdmin }) {
   return (
     <header className="header">
       <div className="container header-content">
@@ -16,14 +16,9 @@ export default function Header({ mostrarAdmin, setMostrarAdmin }) {
           <a href="#servicios" onClick={() => setMostrarAdmin(false)}>Servicios</a>
           <a href="#catalogo" onClick={() => setMostrarAdmin(false)}>Catálogo</a>
           <a href="#cotizador" onClick={() => setMostrarAdmin(false)}>Cotizador</a>
-          <a href="#contacto" onClick={() => setMostrarAdmin(false)}>Contacto</a>
-          <button
-            type="button"
-            className="btn-header-pill"
-            onClick={() => setMostrarAdmin(!mostrarAdmin)}
-          >
-            {mostrarAdmin ? "Volver al Inicio" : "Panel Admin | Gestionar"}
-          </button>
+          <a href="#contacto" className="btn-header-pill" onClick={() => setMostrarAdmin(false)}>
+            Contacto
+          </a>
         </nav>
       </div>
     </header>

@@ -26,7 +26,7 @@ const slidesHero = [
     subtitulo: "Hay una manera especial de celebrar...",
     titulo: "En Laura Decor llenamos tus momentos de magia",
     texto: "Desde arcos orgánicos y arreglos florales hasta montajes completos hechos a tu medida para que celebres junto a quienes más quieres.",
-    imagen: "https://images.unsplash.com/photo-1519225336804-91fe957e8a9c?auto=format&fit=crop&w=1600&q=80",
+    imagen: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80",
     boton: "Explorar Catálogo"
   },
   {
@@ -52,7 +52,7 @@ export default function App() {
 
   // Estado de los paquetes del catalogo (guardados en localStorage)
   const [paquetes, setPaquetes] = useState(() => {
-    const guardados = localStorage.getItem('laura_decor_paquetes_v2')
+    const guardados = localStorage.getItem('laura_decor_paquetes_v3')
     return guardados ? JSON.parse(guardados) : initialPackages
   })
 
@@ -66,7 +66,7 @@ export default function App() {
   })
 
   useEffect(() => {
-    localStorage.setItem('laura_decor_paquetes_v2', JSON.stringify(paquetes))
+    localStorage.setItem('laura_decor_paquetes_v3', JSON.stringify(paquetes))
   }, [paquetes])
 
   useEffect(() => {
@@ -226,7 +226,7 @@ export default function App() {
               className="mosaico-bloque mosaico-con-boton"
               style={{
                 backgroundImage:
-                  'url("https://images.unsplash.com/photo-1519225336804-91fe957e8a9c?auto=format&fit=crop&w=900&q=80")'
+                  'url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80")'
               }}
             >
               <div className="mosaico-capa">
@@ -302,7 +302,12 @@ export default function App() {
       )}
 
       <ChatbotIA paquetes={paquetes} />
-      <Footer />
+      <Footer
+        onAbrirAdmin={() => {
+          setMostrarAdmin(true)
+          window.scrollTo(0, 0)
+        }}
+      />
     </div>
   )
 }
