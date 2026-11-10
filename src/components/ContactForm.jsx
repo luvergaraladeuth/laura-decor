@@ -9,7 +9,7 @@ export default function ContactForm({ onAgregarSolicitud }) {
   const [error, setError] = useState('')
   const [enviado, setEnviado] = useState(false)
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
 
     const nombreLimpio = nombre.trim()
@@ -30,6 +30,19 @@ export default function ContactForm({ onAgregarSolicitud }) {
       fechaEvento: fechaEvento || 'Por definir',
       mensaje: mensajeLimpio,
       atendido: false
+    }
+
+    // Enviar los datos del formulario a la ruta de Express en el Backend con fetch
+    try {
+      await fetch('http://localhost:3000/api/contacto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(nuevaSolicitud)
+      })
+    } catch {
+      // Si estamos en GitHub Pages sin servidor local, se guarda en el estado y localStorage
     }
 
     onAgregarSolicitud(nuevaSolicitud)
